@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade"> 
+ 
+	<name>QUIZ</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>Mai 2012</creationDate>
+	<author>FAREH Nasreddine</author>
+	<authorEmail>fareh.nasreddine@gmail.com</authorEmail>
+	<authorUrl>Dev-skills@gmail.com</authorUrl>
+	<copyright>Copyright les argonautes</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.5</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Quiz ...</description>
+ <install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New in 1.6 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+ 
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>quiz.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</files>
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>menu-quiz</menu>
+		  <submenu>
+	      <menu link="option=com_quiz&amp;view=criteres" >Critères</menu>
+	      <menu link="option=com_quiz&amp;view=quizs" >Questions</menu>
+	      <menu link="option=com_quiz&amp;view=responses" >Réponses</menu>
+	      <menu link="option=com_quiz&amp;view=resultats" >Resultats</menu>
+		  <menu link="option=com_quiz&amp;view=participants" >Participants</menu>
+	    </submenu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>quiz.php</filename>
+			<filename>controller.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_quiz.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_quiz.sys.ini</language>
+		</languages>
+	</administration>
+ 
+</extension>

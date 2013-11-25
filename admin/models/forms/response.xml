@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="content"
+			type="text"
+			label="Content"
+			description="Content"
+			size="40"
+			class="inputbox"
+			default=""
+		/>
+		<field
+			name="valeur"
+			type="text"
+			label="Valeur"
+			description="valeur"
+			size="40"
+			class="inputbox"
+			default=""
+		/>
+			<field
+			name="id_question"
+			type="text"
+			label="Id Question"
+			description="id_question"
+			size="40"
+			class="inputbox"
+			default=""
+		/>
+
+			
+	</fieldset>
+</form>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="critere">
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="title"
+			type="text"
+			label="Title"
+			description="title"
+			size="40"
+			class="inputbox"
+			default=""
+		/>
+		<field
+			name="content"
+			type="text"
+			label="Critère"
+			description="content"
+			size="40"
+			class="inputbox"
+			default=""
+		/>
+
+			
+	</fieldset>
+</form>
