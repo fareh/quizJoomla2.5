@@ -10,9 +10,20 @@ defined('_JEXEC') or die('Restricted Access');
 		<td>
 			<?php echo $item->id; ?>
 		</td>
-		
-		<td>
+        <td>
+			<?php echo $item->entreprise; ?>
+		</td>
+        <td>
+			<?php echo $item->secteur; ?>
+		</td>
+        <td>
 			<?php echo $item->name; ?>
+		</td>
+        <td>
+			<?php echo $item->mail; ?>
+		</td>
+        <td>
+			<?php echo $item->tel; ?>
 		</td>
      
 	</tr>

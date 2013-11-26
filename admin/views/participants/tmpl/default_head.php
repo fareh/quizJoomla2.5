@@ -9,7 +9,19 @@ defined('_JEXEC') or die('Restricted Access');
 	<th width="5">
 		<?php echo JText::_('id'); ?>
 	</th>
-     <th>
+    <th>
+		<?php echo JText::_('Nom de l\'entreprise '); ?>
+	</th>
+    <th>
+		<?php echo JText::_('Secteur économique'); ?>
+	</th>
+    <th>
 		<?php echo JText::_('Name'); ?>
+	</th>
+    <th>
+		<?php echo JText::_('Mail '); ?>
+	</th>
+    <th>
+		<?php echo JText::_('Tél'); ?>
 	</th>
 </tr>

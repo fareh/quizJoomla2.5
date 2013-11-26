@@ -134,7 +134,7 @@ function valider(){
 				
 				
 	
-	 $("#info_submit").click(function(event){
+	 $("#info_submit11").click(function(event){
 		 var toquiz= $('.radio_quiz').is(':checked');
 		 
 		if($('#name').val() != "" && toquiz == true )
@@ -156,3 +156,31 @@ function valider(){
 		} );
 
  });
+ 
+ 
+ 
+	$(document).ready(function($){
+		 jQuery.noConflict();
+      var options = {
+        validateOnKeyUp: true,
+        onError: function(errors) {
+          console.log("el: " + this);
+          console.log(errors);
+        },
+        validators: {
+          zipCode: function(zip) {
+            var re = /^\d{5}(-?\d{4})?$/;
+            return re.test(zip) ? true : "Invalid zip code (ex. 12345 or 12345-1234)";
+          },
+		  
+		  
+		  phone: function(phone) {
+            var re = /^[0-9-+]+$/;
+            return re.test(phone) ? true : "Please specify a valid phone number";
+          }
+		  
+		  
+        }
+      };
+      jQuery('form#quizfrmstart').tinyValidation(options);
+    });

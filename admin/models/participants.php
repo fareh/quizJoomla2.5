@@ -19,7 +19,7 @@ class QuizModelParticipants extends JModelList
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
 		// Select some fields
-		$query->select('id,name');
+		$query->select('id,entreprise,secteur,name, mail , tel');
 		// From the hello table
 		$query->from('#__quiz_name');
 		return $query;

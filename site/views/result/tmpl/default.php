@@ -2,7 +2,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
-<h2> <span>Résultat</span> </h2>	
+<h2 class="first"> <span>Résultat</span> </h2>	
 <div class="quiz-content" >
 <div id="comments">
 		<p style="font-size: 12px; font-weight: bold;">Le questionnaire est maintenant terminé, vous pouvez voir vos résultats ci dessous.<br>Si vous souhaitez commenter ces résultats, vous pouvez utiliser le fomulaire suivant : </p>

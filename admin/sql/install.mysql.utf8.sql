@@ -28,15 +28,21 @@ CREATE TABLE IF NOT EXISTS `#__reponse` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- DROP TABLE IF EXISTS `#__quiz_name`;
+DROP TABLE IF EXISTS `#__quiz_name`;
 
 CREATE TABLE IF NOT EXISTS `#__quiz_name` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `entreprise` varchar(255) NOT NULL,
+  `perimetre` varchar(255) NOT NULL,
+  `secteur` varchar(255) NOT NULL,
+  `questionnaire` varchar(255) NOT NULL,
   `name` varchar(50) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- DROP TABLE IF EXISTS `#__quiz_result`;
+DROP TABLE IF EXISTS `#__quiz_result`;
 
 CREATE TABLE IF NOT EXISTS `#__quiz_result` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

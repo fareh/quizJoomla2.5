@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `#__critere`;
+--  DROP TABLE IF EXISTS `#__critere`;
 
 CREATE TABLE IF NOT EXISTS `#__critere` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `#__critere` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `#__question`;
+--  DROP TABLE IF EXISTS `#__question`;
 
 CREATE TABLE IF NOT EXISTS `#__question` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `#__question` (
 
 
 
-DROP TABLE IF EXISTS `#__reponse`;
+-- DROP TABLE IF EXISTS `#__reponse`;
 
 CREATE TABLE IF NOT EXISTS `#__reponse` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -31,8 +31,14 @@ CREATE TABLE IF NOT EXISTS `#__reponse` (
 DROP TABLE IF EXISTS `#__quiz_name`;
 
 CREATE TABLE IF NOT EXISTS `#__quiz_name` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `entreprise` varchar(255) NOT NULL,
+  `perimetre` varchar(255) NOT NULL,
+  `secteur` varchar(255) NOT NULL,
+  `questionnaire` varchar(255) NOT NULL,
   `name` varchar(50) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
